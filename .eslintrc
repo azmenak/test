@@ -1,0 +1,98 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true,
+    "es6": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "no-param-reassign": 0,
+    "no-nested-ternary": 0,
+    "arrow-parens": [
+      2,
+      "as-needed"
+    ],
+    "no-confusing-arrow": 0,
+    "import/no-unresolved": [
+      2,
+      {
+        "commonjs": true
+      }
+    ],
+    "import/no-named-as-default": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/prefer-default-export": 0,
+    "comma-dangle": [
+      2,
+      "always-multiline"
+    ],
+    "indent": [
+      2,
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "no-console": 1,
+    "no-constant-condition": 0,
+    "max-len": 0,
+    "prefer-template": 2,
+    "no-use-before-define": 0,
+    "newline-per-chained-call": 0,
+    "arrow-body-style": [
+      2,
+      "as-needed"
+    ],
+    "react/prop-types": [
+      2,
+      {
+        "ignore": [
+          "dispatch",
+          "style",
+          "children",
+          "className"
+        ]
+      }
+    ],
+    "react/jsx-sort-props": [
+      2,
+      {
+        "callbacksLast": true,
+        "shorthandFirst": true,
+        "ignoreCase": false
+      }
+    ],
+    "react/jsx-filename-extension": 0,
+    "react/forbid-prop-types": [
+      1,
+      {
+        "forbid": [
+          "any"
+        ]
+      }
+    ],
+    "jsx-a11y/href-no-hash": 0
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "./webpack.config.js"
+      }
+    }
+  },
+  "globals": {
+    "CONFIG": true
+  }
+}
