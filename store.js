@@ -1,4 +1,5 @@
 import { fromJS } from 'immutable';
+import { combineReducers } from 'redux-immutable';
 import { createStore, applyMiddleware, compose } from 'redux';
 import reduxSaga from 'redux-saga';
 
@@ -17,7 +18,7 @@ if (reduxDevTool) {
 }
 
 const store = createStore(
-  reducer,
+  combineReducers({ data: reducer }),
   fromJS({}),
   compose(...enhancers)
 );
