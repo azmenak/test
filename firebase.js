@@ -17,7 +17,7 @@ function getInstance() {
 
 export function database(path = '') {
   const app = getInstance();
-  return app.database().ref(`/${process.env.NODE_ENV}/${path}`);
+  return app.database().ref(path);
 }
 
 export const firebaseEmitter = (key, ref) => eventChannel(emitter => {
@@ -48,11 +48,11 @@ export function* firebaseSync(key, ref, action, options = {}) {
   const syncChannel = yield call(firebaseEmitter, key, ref);
   try {
     while (true) {
-      const { val } = yield take(syncChannel);
+      const { val, key: valueKey } = yield take(syncChannel);
       if (typeof action === 'string') {
-        yield put({ type: action, data: val });
+        yield put({ type: action, data: val, key: valueKey });
       } else {
-        yield put(action(val));
+        yield put(action(val, valueKey));
       }
     }
   } finally {
