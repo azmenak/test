@@ -7,10 +7,6 @@ let firebaseInstance;
 function getInstance() {
   if (!firebaseInstance) {
     firebaseInstance = Firebase.initializeApp(CONFIG.firebase);
-    if (process.env.NODE_ENV === 'development') {
-      window.firebaseApp = firebaseInstance;
-      Firebase.database.enableLogging(true);
-    }
   }
   return firebaseInstance;
 }
