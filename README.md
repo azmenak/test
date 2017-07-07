@@ -2,6 +2,23 @@
 
 Shows a list of IP addresses viewing the page
 
+## Installation
+
+The dev server has been tested using node v7.8.0 and v8.1.3, should work with v6.11.0 LTS and above.
+The app itself had been tested in Firefox 54, Chrome 57 and 61, Safari 10.1, Safari iOS 10.2
+
+- Install required dependencies with `npm i` or `yarn`
+- Start the dev server with `npm start`
+- Navigate to `localhost:9999`
+
+## Tech
+
+- Firebase as a "backend" to store and sync data
+- React to render views
+- Redux with Immutable data for state management
+- Redux-Sagas to manage application state
+- Webpack for building
+
 ## Requirements
 
 Create a single-page web app that:
