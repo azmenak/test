@@ -7,7 +7,7 @@ Shows a list of IP addresses viewing the page
 Create a single-page web app that:
 
 1. **Shows the list of IP addresses currently viewing the app**
-2. **Shop IP of the last connected user (separatelly)**
+2. **Show IP of the last connected user (separatelly)**
 3. **When a new user opens the app, dynamically adds their IP address to the list of IPs**
 
 ## Guidelines
