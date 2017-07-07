@@ -8,6 +8,7 @@ const initialState = fromJS({
   lastConnection: null,
   ownConnectionKey: null,
   ip: null,
+  fetchIpError: null,
 });
 
 export default createReducer(initialState, {
@@ -18,4 +19,6 @@ export default createReducer(initialState, {
 
   [actions.SET_OWN_IP]: (state, { ip }) => state.set('ip', ip),
   [actions.SET_OWN_CONNECTION_KEY]: (state, { key }) => state.set('ownConnectionKey', key),
+
+  [actions.FETCH_IP_ERROR]: (state, { error }) => state.set('fetchIpError', error),
 });

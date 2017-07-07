@@ -7,3 +7,6 @@ export const setOwnIp = ip => ({ type: SET_OWN_IP, ip });
 
 export const SET_OWN_CONNECTION_KEY = 'SET_OWN_CONNECTION_KEY';
 export const setOwnConnectionKey = key => ({ type: SET_OWN_CONNECTION_KEY, key });
+
+export const FETCH_IP_ERROR = 'FETCH_IP_ERROR';
+export const fetchIpError = error => ({ type: FETCH_IP_ERROR, error });
