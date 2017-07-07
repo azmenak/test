@@ -22,7 +22,6 @@ const render = Component => {
 render(Main);
 
 if (module.hot) {
-  window.CONFIG = CONFIG;
   module.hot.accept('./components/Main', () => {
     System.import('./components/Main').then(component => {
       render(component.default);
